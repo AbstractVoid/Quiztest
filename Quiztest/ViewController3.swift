@@ -1,4 +1,11 @@
 //
+//  ViewController3.swift
+//  Quiztest
+//
+//  Created by SLISLab on 9/29/15.
+//  Copyright © 2015 bitgadmin. All rights reserved.
+//
+//
 //  ViewController.swift
 //  Quiztest
 //
@@ -8,35 +15,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController3: UIViewController {
+    
+    @IBOutlet weak var Result: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.Result.text = String(self.dataShare.correctCount)
     }
     
-    let correctAnswer = "yes"
-    var correctNew = 0
     let dataShare = SharedData.sharedInstance
     
     
     
-
-    @IBOutlet weak var ImageQ1: UIImageView!
-    
-    @IBOutlet weak var AnswerQ1: UITextField!
-    
-    @IBAction func SubmitQ1(sender: AnyObject) {
-        let text = AnswerQ1.text!.lowercaseString
-        if(text==correctAnswer){
-            correctNew = 1
-        } else{
-            
-        }
-        self.dataShare.correctCount = correctNew
-        
-        
-    }
     
     
     
@@ -44,9 +35,9 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
     
-
+    
+    
 }
 

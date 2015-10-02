@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quiztest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,159 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="msn-Fh-Pk3">
+                                <rect key="frame" x="146" y="90" width="338" height="232"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Answer" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RUC-CS-dym">
+                                <rect key="frame" x="266" y="357" width="69" height="125"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNd-cj-EV7">
+                                <rect key="frame" x="276" y="520" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="SubmitQ1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x5w-iB-3Fl"/>
+                                    <segue destination="xAf-kc-Lck" kind="show" identifier="SegueToTwo" id="eFH-jD-olk"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TNd-cj-EV7" secondAttribute="bottom" constant="55" id="1QY-f3-dGE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TNd-cj-EV7" secondAttribute="bottom" constant="50" id="6TD-7M-vGv"/>
+                            <constraint firstItem="TNd-cj-EV7" firstAttribute="top" secondItem="RUC-CS-dym" secondAttribute="bottom" constant="38" id="Dx3-Yn-xdo"/>
+                            <constraint firstItem="msn-Fh-Pk3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GZJ-xy-c9I"/>
+                            <constraint firstItem="RUC-CS-dym" firstAttribute="top" secondItem="msn-Fh-Pk3" secondAttribute="bottom" constant="35" id="GiA-VP-tFR"/>
+                            <constraint firstItem="RUC-CS-dym" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qw2-1A-YUI"/>
+                            <constraint firstItem="TNd-cj-EV7" firstAttribute="top" secondItem="RUC-CS-dym" secondAttribute="bottom" constant="61" id="WXS-do-o0B"/>
+                            <constraint firstItem="RUC-CS-dym" firstAttribute="top" secondItem="msn-Fh-Pk3" secondAttribute="bottom" constant="138" id="aAv-R6-Inf"/>
+                            <constraint firstItem="msn-Fh-Pk3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="15" id="gFf-lM-586"/>
+                            <constraint firstItem="TNd-cj-EV7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hTy-v3-8ok"/>
+                            <constraint firstItem="msn-Fh-Pk3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="34" id="iwR-hN-2Ku"/>
+                            <constraint firstItem="msn-Fh-Pk3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="mcl-a0-Gqm"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="GZJ-xy-c9I"/>
+                                <exclude reference="iwR-hN-2Ku"/>
+                                <exclude reference="aAv-R6-Inf"/>
+                                <exclude reference="WXS-do-o0B"/>
+                                <exclude reference="1QY-f3-dGE"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="AnswerQ1" destination="RUC-CS-dym" id="xmA-Mp-FIT"/>
+                        <outlet property="ImageQ1" destination="msn-Fh-Pk3" id="zXx-EO-Yiz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="228" y="307"/>
+        </scene>
+        <!--View Controller3-->
+        <scene sceneID="GwO-US-CYp">
+            <objects>
+                <viewController id="Tvn-LL-bjS" customClass="ViewController3" customModule="Quiztest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jiK-8d-24O"/>
+                        <viewControllerLayoutGuide type="bottom" id="gCJ-sT-7Yo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vP6-vF-zVq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Your Score was:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kM3-la-Sle">
+                                <rect key="frame" x="220" y="28" width="160" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="abT-th-FUk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfh-LA-dA4">
+                                <rect key="frame" x="279" y="290" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pfh-LA-dA4" firstAttribute="centerY" secondItem="vP6-vF-zVq" secondAttribute="centerY" id="86M-bW-cyc"/>
+                            <constraint firstItem="kM3-la-Sle" firstAttribute="centerX" secondItem="vP6-vF-zVq" secondAttribute="centerX" id="AC2-oT-rUX"/>
+                            <constraint firstItem="pfh-LA-dA4" firstAttribute="top" secondItem="kM3-la-Sle" secondAttribute="bottom" constant="46" id="RYf-Hn-eY9"/>
+                            <constraint firstItem="kM3-la-Sle" firstAttribute="top" secondItem="jiK-8d-24O" secondAttribute="bottom" constant="8" id="VME-qa-DkS"/>
+                            <constraint firstItem="pfh-LA-dA4" firstAttribute="centerX" secondItem="vP6-vF-zVq" secondAttribute="centerX" id="aQi-kD-DXF"/>
+                            <constraint firstItem="kM3-la-Sle" firstAttribute="centerX" secondItem="vP6-vF-zVq" secondAttribute="centerX" id="npa-a7-Vyz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Result" destination="pfh-LA-dA4" id="L1e-3f-Coc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PnJ-2T-OlR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="959" y="-377"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="SRb-Ih-c6H">
+            <objects>
+                <viewController id="xAf-kc-Lck" customClass="ViewController2" customModule="Quiztest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="19a-at-aA7"/>
+                        <viewControllerLayoutGuide type="bottom" id="lN8-Nd-VZK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xj6-Ht-8Ua">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QO-m8-Z9W">
+                                <rect key="frame" x="276" y="164" width="49" height="426"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="Submit2:" destination="xAf-kc-Lck" eventType="touchUpInside" id="4nm-dy-reR"/>
+                                    <segue destination="Tvn-LL-bjS" kind="show" identifier="SegueToThree" id="924-gp-0Vx"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Answer" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yqD-Qq-n7X">
+                                <rect key="frame" x="266" y="111" width="69" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="Submit2:" destination="xAf-kc-Lck" eventType="editingDidEnd" id="Z98-m2-NLq"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do we use Android Studio?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjn-Fe-9p1">
+                                <rect key="frame" x="197" y="40" width="206" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1QO-m8-Z9W" firstAttribute="top" secondItem="yqD-Qq-n7X" secondAttribute="bottom" constant="23" id="6ki-4J-5vU"/>
+                            <constraint firstItem="lN8-Nd-VZK" firstAttribute="top" secondItem="1QO-m8-Z9W" secondAttribute="bottom" constant="10" id="KaW-h6-jLs"/>
+                            <constraint firstItem="yqD-Qq-n7X" firstAttribute="top" secondItem="Vjn-Fe-9p1" secondAttribute="bottom" constant="50" id="QGT-QW-NU5"/>
+                            <constraint firstItem="yqD-Qq-n7X" firstAttribute="centerX" secondItem="Xj6-Ht-8Ua" secondAttribute="centerX" id="eUG-eE-xjF"/>
+                            <constraint firstItem="1QO-m8-Z9W" firstAttribute="centerX" secondItem="Xj6-Ht-8Ua" secondAttribute="centerX" id="lAU-jM-nul"/>
+                            <constraint firstItem="Vjn-Fe-9p1" firstAttribute="top" secondItem="19a-at-aA7" secondAttribute="bottom" constant="20" id="x2G-Hs-GLs"/>
+                            <constraint firstItem="Vjn-Fe-9p1" firstAttribute="centerX" secondItem="Xj6-Ht-8Ua" secondAttribute="centerX" id="zsb-1p-JxX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Answer2" destination="yqD-Qq-n7X" id="LtJ-Oi-fqf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qnq-X1-AX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="946" y="384"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image" width="338" height="232"/>
+    </resources>
 </document>
